@@ -1,0 +1,12 @@
+Hello, World!
+This is a sample text file.
+It contains multiple lines of text,
+each of which can be processed concurrently.
+The goal is to demonstrate how to handle
+file I/O operations in Go using concurrency.
+This approach can significantly improve performance
+when dealing with large files or when performing
+complex processing on each line of text.
+Remember, Go makes concurrency intuitive and efficient,
+leveraging goroutines and channels.
+Enjoy exploring concurrent programming in Go!
