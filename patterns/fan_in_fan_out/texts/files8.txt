@@ -1,0 +1,3 @@
+Eight files are a lot,
+but not too much for Go's concurrency model.
+It handles them with ease.
