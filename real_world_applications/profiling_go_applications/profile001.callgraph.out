@@ -1,0 +1,258 @@
+positions: instr line
+events: cpu(ms)
+
+ob=(1) /tmp/go-build3670321580/b001/exe/main
+fl=(1) /usr/local/go/src/runtime/internal/syscall/asm_linux_amd64.s
+fn=(1) runtime/internal/syscall.Syscall6
+0x40456e 36 20
+
+ob=(1)
+fl=(2) /usr/local/go/src/runtime/mbarrier.go
+fn=(2) runtime.typedmemmove
++73235 152 10
+
+ob=(1)
+fl=(3) /usr/local/go/src/runtime/proc.go
+fn=(3) runtime.(*randomEnum).next
++190072 7108 10
+
+ob=(1)
+fl=(3)
+fn=(4) runtime.checkTimers
++3394 3949 10
++26 3954 10
+
+ob=(1)
+fl=(3)
+fn=(5) runtime.reentersyscall
++4043 4315 10
+
+ob=(1)
+fl=(4) /usr/local/go/src/runtime/internal/syscall/syscall_linux.go
+fn=(6) runtime/internal/syscall.EpollWait
+-270908 55 0
+cfl=(1)
+cfn=(1)
+calls=0 -270770 36
+* * 10
+
+ob=(1)
+fl=(4)
+fn=(7) syscall.RawSyscall6
++104 38 0
+cfl=(1)
+cfn=(1)
+calls=0 +138 36
+* * 10
+
+ob=(1)
+fl=(5) /usr/local/go/src/runtime/chan.go
+fn=(8) runtime.chanrecv2
++17093 447 0
+cfl=(5)
+cfn=(9) runtime.chanrecv
+calls=0 +17531 544
+* * 10
+
+ob=(1)
+fl=(5)
+fn=(9)
++438 544 0
+cfl=(2)
+cfn=(2)
+calls=0 +56176 152
+* * 10
+
+ob=(1)
+fl=(6) /usr/local/go/src/runtime/netpoll_epoll.go
+fn=(10) runtime.netpoll
++192394 118 0
+cfl=(4)
+cfn=(6)
+calls=0 -17635 55
+* * 10
+
+ob=(1)
+fl=(3)
+fn=(11) runtime.findRunnable
++48659 3160 0
+cfl=(3)
+cfn=(4)
+calls=0 +56810 3949
+* * 10
++928 3254 0
+cfl=(3)
+cfn=(12) runtime.stealWork
+calls=0 +4757 3553
+* * 10
+cfl=(3)
+cfn=(12)
+calls=0 +4936 3577
+* * 10
++1216 3470 0
+cfl=(6)
+cfn=(10)
+calls=0 -49587 118
+* * 10
+
+ob=(1)
+fl=(3)
+fn=(12)
++2613 3553 0
+cfl=(3)
+cfn=(3)
+calls=0 +2613 7108
+* * 10
++179 3577 0
+cfl=(3)
+cfn=(4)
+calls=0 +3420 3954
+* * 10
+
+ob=(1)
+fl=(3)
+fn=(13) runtime.schedule
++2692 3868 0
+cfl=(3)
+cfn=(11)
+calls=0 -4008 3254
+* * 20
+cfl=(3)
+cfn=(11)
+calls=0 -4936 3160
+* * 10
+cfl=(3)
+cfn=(11)
+calls=0 -2792 3470
+* * 10
+
+ob=(1)
+fl=(3)
+fn=(14) runtime.park_m
++1499 4036 0
+cfl=(3)
+cfn=(13)
+calls=0 * 3868
+* * 40
+
+ob=(1)
+fl=(3)
+fn=(15) runtime.entersyscall
++172843 4390 0
+cfl=(3)
+cfn=(5)
+calls=0 +3093 4315
+* * 10
+
+ob=(1)
+fl=(7) /usr/local/go/src/runtime/asm_amd64.s
+fn=(16) runtime.mcall
++10935 458 0
+cfl=(3)
+cfn=(14)
+calls=0 -172843 4036
+* * 40
+
+ob=(1)
+fl=(8) /usr/local/go/src/syscall/zsyscall_linux_amd64.go
+fn=(17) syscall.write
++217613 964 0
+cfl=(9) /usr/local/go/src/syscall/syscall_linux.go
+cfn=(18) syscall.Syscall
+calls=0 +223159 69
+* * 10
+cfl=(9)
+cfn=(18)
+calls=0 +223192 82
+* * 10
+
+ob=(1)
+fl=(9)
+fn=(18)
++5546 69 0
+cfl=(3)
+cfn=(15)
+calls=0 -228548 4390
+* * 10
++33 82 0
+cfl=(4)
+cfn=(7)
+calls=0 -674648 38
+* * 10
+
+ob=(1)
+fl=(10) /usr/local/go/src/internal/poll/fd_unix.go
+fn=(19) internal/poll.(*FD).Write
++83874 380 0
+cfl=(10)
+cfn=(20) internal/poll.ignoringEINTRIO
+calls=0 +83874 736
+* * 20
+
+ob=(1)
+fl=(10)
+fn=(20)
+* 736 0
+cfl=(11) /usr/local/go/src/syscall/syscall_unix.go
+cfn=(21) syscall.Write
+calls=0 * 209
+* * 20
+
+ob=(1)
+fl=(11)
+fn=(21)
+* 209 0
+cfl=(8)
+cfn=(17)
+calls=0 -89453 964
+* * 20
+
+ob=(1)
+fl=(12) /usr/local/go/src/os/file.go
+fn=(22) os.(*File).Write
++17321 189 0
+cfl=(13) /usr/local/go/src/os/file_posix.go
+cfn=(23) os.(*File).write
+calls=0 +17321 46
+* * 20
+
+ob=(1)
+fl=(13)
+fn=(23)
+* 46 0
+cfl=(10)
+cfn=(19)
+calls=0 -17321 380
+* * 20
+
+ob=(1)
+fl=(14) /usr/local/go/src/fmt/print.go
+fn=(24) fmt.Fprintf
++32390 225 0
+cfl=(12)
+cfn=(22)
+calls=0 * 189
+* * 20
+
+ob=(1)
+fl=(14)
+fn=(25) fmt.Printf
+0x686f3b 233 0
+cfl=(14)
+cfn=(24)
+calls=0 * 225
+* * 20
+
+ob=(1)
+fl=(15) /home/abhipraydumka/go_concurrency/real_world_applications/profiling_go_applications/main.go
+fn=(26) main.worker
+* 19 0
+cfl=(14)
+cfn=(25)
+calls=0 * 233
+* * 20
++43 18 0
+cfl=(5)
+cfn=(8)
+calls=0 0x408811 447
+* * 10

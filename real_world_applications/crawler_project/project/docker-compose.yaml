@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  mongo:
+    image: mongo:4.2
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGOUSER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGOINITDATABASE}
+
+  crawler:
+    build:
+      context: ./../backend
+      dockerfile: ./../backend/backend-service.dockerfile
+    restart: always
+    ports:
+      - "8081:8081"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      ELASTICSEARCH_HOST: ${ELASTICSEARCH_HOST}
+      ELASTICSEARCH_PORT: ${ELASTICSEARCH_PORT}
+      MONGOURL: ${MONGOURL}
+      MONGOUSER: ${MONGOUSER}
+      MONGOPASSWORD: ${MONGOPASSWORD}
+      MONGOINITDATABASE: ${MONGOINITDATABASE}
+    volumes:
+      - ./Seed.txt:/app/Seed.txt
+
+volumes:
+  esdata:
+    driver: local
