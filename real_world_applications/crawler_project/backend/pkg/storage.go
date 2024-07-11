@@ -30,7 +30,6 @@ func InsertCombinedContent(ctx context.Context, url string, status int, content 
 	if err != nil {
 		return "", err
 	}
-
 	return result, nil
 
 }

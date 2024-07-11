@@ -45,6 +45,15 @@ services:
     volumes:
       - ./Seed.txt:/app/Seed.txt
 
+  frontend:
+    build:
+      context: ./../frontend
+      dockerfile: ./../frontend/frontend-service.dockerfile
+    restart:
+      always
+    ports:
+      - "80:80"
+
 volumes:
   esdata:
     driver: local

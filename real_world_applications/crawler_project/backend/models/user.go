@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var client *mongo.Client
@@ -17,6 +18,26 @@ type User struct {
 	Username string `bson:"username" json:"username"`
 	Password string `bson:"password" json:"password"`
 	Email    string `bson:"email" json:"email"`
+}
+
+func EnsureUserEmailUnique() error {
+	collection := client.Database("users").Collection("users")
+
+	// Index model for specifying the index.
+	indexModel := mongo.IndexModel{
+		Keys: bson.M{
+			"email": 1, // Index in ascending order.
+		},
+		Options: options.Index().SetUnique(true), // Ensure uniqueness.
+	}
+
+	// Create the index.
+	_, err := collection.Indexes().CreateOne(context.Background(), indexModel)
+	if err != nil {
+		return fmt.Errorf("error while creating unique index for email: %v", err)
+	}
+
+	return nil
 }
 
 func (u *User) Insert() error {

@@ -1,18 +1,163 @@
-[31mERRO[0m[2024-07-09T00:10:46+05:30] [MyApp] error binding login credentials: %vcode=400, message=json: Unmarshal(non-pointer main.LoginCredentials), internal=json: Unmarshal(non-pointer main.LoginCredentials) 
-[31mERRO[0m[2024-07-09T00:11:23+05:30] [MyApp] error binding login credentials: %vcode=400, message=json: Unmarshal(non-pointer main.LoginCredentials), internal=json: Unmarshal(non-pointer main.LoginCredentials) 
-[31mERRO[0m[2024-07-09T00:11:47+05:30] [MyApp] error binding login credentials: %vcode=400, message=json: Unmarshal(non-pointer main.LoginCredentials), internal=json: Unmarshal(non-pointer main.LoginCredentials) 
-[31mERRO[0m[2024-07-09T00:12:29+05:30] [MyApp] error binding login credentials: %vcode=400, message=json: Unmarshal(non-pointer main.LoginCredentials), internal=json: Unmarshal(non-pointer main.LoginCredentials) 
-[31mERRO[0m[2024-07-09T00:12:58+05:30] [MyApp] error getting user by email: %vuser not found 
-[31mERRO[0m[2024-07-09T00:13:38+05:30] [MyApp] error getting user by email: %vuser not found 
-[31mERRO[0m[2024-07-09T00:14:38+05:30] [MyApp] error getting user by email: %vuser not found 
-[31mERRO[0m[2024-07-09T00:15:10+05:30] [MyApp] error getting user by email: %vuser not found 
-[31mERRO[0m[2024-07-09T00:15:45+05:30] [MyApp] error getting user by email: %vuser not found 
-[31mERRO[0m[2024-07-09T00:38:48+05:30] [MyApp] error getting user by email: %verror while getting user: error decoding key _id: cannot decode objectID into an integer type 
-[31mERRO[0m[2024-07-09T00:43:19+05:30] [MyApp] error getting user by email: %verror while getting user: error decoding key _id: cannot decode objectID into an integer type 
-[31mERRO[0m[2024-07-09T00:43:36+05:30] [MyApp] error getting user by email: %verror while getting user: error decoding key _id: cannot decode objectID into an integer type 
-[31mERRO[0m[2024-07-09T00:43:57+05:30] [MyApp] error getting user by email: %verror while getting user: error decoding key _id: cannot decode objectID into an integer type 
-[31mERRO[0m[2024-07-09T00:45:38+05:30] [MyApp] error getting user by email: %verror while getting user: error decoding key _id: cannot decode objectID into an integer type 
-[31mERRO[0m[2024-07-09T00:56:29+05:30] [MyApp] error getting user by id: %vuser not found 
-[31mERRO[0m[2024-07-09T00:57:20+05:30] [MyApp] error getting user by id: %vuser not found 
-[31mERRO[0m[2024-07-09T00:57:39+05:30] [MyApp] error getting user by id: %vuser not found 
-[36mINFO[0m[2024-07-09T01:02:00+05:30] [MyApp] update operation result: matched %v, modified %v1 1 
+[31mERRO[0m[2024-07-10T17:21:21+05:30] [MyApp] Error fetching content from https://www.khanacademy.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:21:44+05:30] [MyApp] Error fetching content from https://www.coursera.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.reuters.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.theguardian.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://gizmodo.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://techcrunch.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.wired.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.theverge.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:21:55+05:30] [MyApp] Error fetching content from https://arstechnica.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:22:24+05:30] [MyApp] Error fetching content from https://www.etsy.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:24:01+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:24:01+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:24:09+05:30] [MyApp] Error fetching content from https://techcrunch.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:24:11+05:30] [MyApp] Error fetching content from https://www.wired.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:25:39+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:25:39+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:25:39+05:30] [MyApp] Error fetching content from https://www.theguardian.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:25:47+05:30] [MyApp] Error fetching content from https://techcrunch.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:25:48+05:30] [MyApp] Error fetching content from https://www.wired.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:26:24+05:30] [MyApp] Error fetching content from https://www.edx.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:28:11+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:28:11+05:30] [MyApp] Error fetching content from https://www.theguardian.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:28:11+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:28:16+05:30] [MyApp] Error fetching content from https://techcrunch.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:28:17+05:30] [MyApp] Error fetching content from https://www.wired.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:29:11+05:30] [MyApp] Error fetching content from https://gizmodo.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:29:11+05:30] [MyApp] Error fetching content from https://www.theverge.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:29:11+05:30] [MyApp] Error fetching content from https://arstechnica.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:29:16+05:30] [MyApp] Error fetching content from https://www.khanacademy.org: could not retrieve attribute "outerHTML": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:29:54+05:30] [MyApp] Error fetching content from https://www.jstor.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:30:11+05:30] [MyApp] Error fetching content from https://www.ted.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:30:11+05:30] [MyApp] Error fetching content from https://ocw.mit.edu: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:31:54+05:30] [MyApp] Error fetching content from https://techcrunch.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:31:55+05:30] [MyApp] Error fetching content from https://www.wired.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:32:15+05:30] [MyApp] Error fetching content from https://www.theverge.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:32:15+05:30] [MyApp] Error fetching content from https://arstechnica.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:32:28+05:30] [MyApp] Error fetching content from https://www.theguardian.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:32:28+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:32:28+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:33:14+05:30] [MyApp] Error fetching content from https://techcrunch.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:33:14+05:30] [MyApp] Error fetching content from https://www.wired.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:33:35+05:30] [MyApp] Error fetching content from https://www.theverge.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:33:35+05:30] [MyApp] Error fetching content from https://arstechnica.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:33:48+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:33:48+05:30] [MyApp] Error fetching content from https://www.theguardian.com: could not retrieve attribute "outerHTML": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:33:48+05:30] [MyApp] Error fetching content from https://www.bbc.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:34:18+05:30] [MyApp] Error fetching content from https://www.ted.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:34:36+05:30] [MyApp] Error fetching content from https://www.khanacademy.org: could not retrieve attribute "outerHTML": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:34:36+05:30] [MyApp] Error fetching content from https://gizmodo.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:34:39+05:30] [MyApp] Error fetching content from https://www.nature.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://arstechnica.com: could not dial "ws://127.0.0.1:44835/devtools/browser/46714123-8903-4ad2-941b-322d4feff8d4": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.nytimes.com: could not dial "ws://127.0.0.1:45353/devtools/browser/f2aec36a-37a3-4872-b029-bd9627d16a92": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.theverge.com: could not dial "ws://127.0.0.1:44283/devtools/browser/e809abe0-13cf-437e-92fe-ba9a9f37ce06": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://gizmodo.com: could not dial "ws://127.0.0.1:36305/devtools/browser/45fccd5f-a316-48a1-b456-e82973fa850d": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.bbc.com: could not dial "ws://127.0.0.1:38977/devtools/browser/b73f4da3-4e13-4270-bc41-71ab5e0824f8": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.reuters.com: could not dial "ws://127.0.0.1:43647/devtools/browser/4cd1fa0c-8f56-45ab-8e83-d1c9b8292f54": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://techcrunch.com: could not dial "ws://127.0.0.1:38635/devtools/browser/5265f389-a04c-44a4-91b7-06a07690de06": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.theguardian.com: could not dial "ws://127.0.0.1:40207/devtools/browser/35456f64-f485-4566-aaa6-37fc57fda2b6": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.wired.com: could not dial "ws://127.0.0.1:39933/devtools/browser/3822d962-ab60-4f05-bb15-c2888cd9f395": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:38+05:30] [MyApp] Error fetching content from https://www.cnn.com: could not dial "ws://127.0.0.1:42573/devtools/browser/17576132-0fac-4c47-a6aa-6c14cd65e3db": context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.jstor.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.edx.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.sciencemag.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://ocw.mit.edu: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.ted.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.khanacademy.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.coursera.org: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://journals.plos.org/plosone/: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://www.nature.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:35:59+05:30] [MyApp] Error fetching content from https://pubmed.ncbi.nlm.nih.gov: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.twitter.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.etsy.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.reddit.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.ebay.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.facebook.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.amazon.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.instagram.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.walmart.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:20+05:30] [MyApp] Error fetching content from https://www.linkedin.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:36:21+05:30] [MyApp] Error fetching content from https://www.alibaba.com: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/disabilities: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/childcare-parenting: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/benefits: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/justice: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/citizenship: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:00+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/business: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:01+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/births-deaths-marriages: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:01+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/driving: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:05+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/education: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:25+05:30] [MyApp] Error fetching content from https://www.gov.uk/search/news-and-communications: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:27+05:30] [MyApp] Error fetching content from https://www.gov.uk/search/guidance-and-regulation: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:50+05:30] [MyApp] Error fetching content from https://www.gov.uk/search/policy-papers-and-consultations: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:37:50+05:30] [MyApp] Error fetching content from https://www.gov.uk/search/research-and-statistics: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/visas-immigration: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/tax: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/government/organisations: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/environment-countryside: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/employing-people: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/working: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/housing-local-services: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/browse/abroad: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:38:12+05:30] [MyApp] Error fetching content from https://www.gov.uk/search/transparency-and-freedom-of-information-releases: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:12+05:30] [MyApp] Error fetching content from https://www.smartsurvey.co.uk/s/gov-uk-banner/?c=/: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:33+05:30] [MyApp] Error fetching content from https://www.gov.uk/government/organisations/government-digital-service: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:33+05:30] [MyApp] Error fetching content from https://www.gov.uk/cymraeg: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:56+05:30] [MyApp] Error fetching content from https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:38:56+05:30] [MyApp] Error fetching content from https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/help/terms-conditions: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/government/get-involved: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/help/accessibility-statement: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/help/cookies: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/help/privacy-notice: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/contact: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/help: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:02+05:30] [MyApp] Error fetching content from https://www.gov.uk/government/how-government-works: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:39:20+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_bg: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:20+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_en: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_ga: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_da: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_el: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_es: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_et: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_cs: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_de: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:39:24+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_fr: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:40:21+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_it: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:21+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_hr: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_ro: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_pt: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_lv: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_nl: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_lt: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_hu: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_pl: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:40:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_mt: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:09+05:30] [MyApp] Error fetching content from https://commission.europa.eu/news/know-your-eu-passenger-rights-you-travel-2024-07-09_en: websocket url timeout reached 
+[31mERRO[0m[2024-07-10T17:41:22+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_sl: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:22+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_sk: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_sv: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_ru: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_fi: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/index_uk: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/institutions-and-bodies-profiles_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://ec.europa.eu/stories/eu-institutional-appointments: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:41:25+05:30] [MyApp] Error fetching content from https://europa.eu/learning-corner/home_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:11+05:30] [MyApp] Error fetching content from https://www.eib.org/en/press/all/2024-269-europeans-over-30-understand-climate-change-better-than-younger-generations-eib-survey-finds: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:23+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/contact-eu/call-us_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:23+05:30] [MyApp] Error fetching content from https://single-market-economy.ec.europa.eu/news/mandatory-drivers-assistance-systems-expected-help-save-over-25000-lives-2038-2024-07-05_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/privacy-policy_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/contact-eu/write-us_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/contact-eu/meet-us_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/legal-notice_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/cookies_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/languages-our-websites_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:42:26+05:30] [MyApp] Error fetching content from https://european-union.europa.eu/contact-eu/social-media-channels_en: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:43:30+05:30] [MyApp] Error fetching content from https://blog.usa.gov/: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:49:00+05:30] [MyApp] Error fetching content from https://arstechnica.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:49:00+05:30] [MyApp] Error fetching content from https://www.wired.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T17:49:00+05:30] [MyApp] Error fetching content from https://www.nytimes.com: context deadline exceeded 
+[31mERRO[0m[2024-07-10T19:33:01+05:30] [MyApp] error getting web page: %verror fetching document: [404 Not Found] {"_index":"webpages","_type":"_doc","_id":"JD9FmZABnYi","found":false} 
+[31mERRO[0m[2024-07-10T19:33:09+05:30] [MyApp] error getting web page: %verror fetching document: [404 Not Found] {"_index":"webpages","_type":"_doc","_id":"JD9FmZABnYiZ","found":false} 

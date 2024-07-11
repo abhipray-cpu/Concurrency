@@ -22,7 +22,7 @@ func Parse(htmlContent string) ([]string, []string, string, string, []string, er
 	f = func(n *html.Node) {
 		if n.Type == html.ElementNode {
 			switch n.Data {
-			case "a", "link": // Handle both <a> and <link> tags for URLs
+			case "a": // Handle both <a> and <link> tags for URLs
 				for _, a := range n.Attr {
 					if a.Key == "href" {
 						urls = append(urls, a.Val)

@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"net/url"
 	"web_crawler/models"
 	"web_crawler/utils"
 
@@ -133,4 +135,120 @@ func (app *Config) deleteUserHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "Error deleting user")
 	}
 	return c.String(http.StatusOK, "User deleted successfully")
+}
+
+func (app *Config) AddUrlHandler(c echo.Context) error {
+
+	type Body struct {
+		URL string
+	}
+	var body Body
+	if err := c.Bind(&body); err != nil {
+		app.Logger.Error("error binding user data: %v", err)
+		return c.String(http.StatusBadRequest, "Invalid user data")
+	}
+
+	if body.URL == "" {
+		return c.String(http.StatusBadRequest, "URL is required")
+	}
+
+	isValidURL := func(inputURL string) bool {
+		_, err := url.ParseRequestURI(inputURL)
+		if err != nil {
+			return false
+		}
+		return true
+	}
+
+	if !isValidURL(body.URL) {
+		return c.String(http.StatusBadRequest, "Invalid URL")
+	}
+	app.Scheduler.Submit(body.URL)
+	return c.String(http.StatusOK, "URL added to the queue")
+}
+
+func (app *Config) SearchPageHandler(c echo.Context) error {
+	type Body struct {
+		Query string
+	}
+	var body Body
+	if err := c.Bind(&body); err != nil {
+		app.Logger.Error("error binding search data: %v", err)
+		return c.String(http.StatusBadRequest, "Invalid search data")
+
+	}
+
+	ctx := c.Request().Context()
+	if body.Query == "" {
+		return c.String(http.StatusBadRequest, "Query is required")
+	}
+
+	pages, err := models.SearchWebPage(ctx, body.Query)
+
+	if err != nil {
+		app.Logger.Error("error searching web page: %v", err)
+		return c.JSON(http.StatusInternalServerError, echo.Map{"error": err.Error()})
+
+	}
+
+	return c.JSON(http.StatusOK, pages)
+}
+
+func (app *Config) GetPageHandler(c echo.Context) error {
+	ctx := c.Request().Context()
+	id := c.Param("id")
+
+	page, err := models.ReadWebPage(ctx, id)
+	if err != nil {
+		app.Logger.Error("error getting web page: %v", err)
+		return c.JSON(http.StatusInternalServerError, echo.Map{"error": err.Error()})
+
+	}
+	return c.JSON(http.StatusOK, page)
+}
+
+func (app *Config) DeletePageHandler(c echo.Context) error {
+	ctx := c.Request().Context()
+	id := c.Param("id")
+	err := models.DeleteWebPage(ctx, id)
+	if err != nil {
+		app.Logger.Error("error deleting web page: %v", err)
+		return c.JSON(http.StatusInternalServerError, echo.Map{"error": err.Error()})
+
+	}
+
+	return c.JSON(http.StatusOK, echo.Map{"message": "page deleted successfully"})
+}
+
+func (app *Config) UpdatePageHandler(c echo.Context) error {
+	ctx := c.Request().Context()
+	id := c.Param("id")
+
+	var page models.WebPage
+	if err := c.Bind(&page); err != nil {
+		app.Logger.Error("error binding page data: %v", err)
+		return c.String(http.StatusBadRequest, "Invalid page data")
+
+	}
+
+	err := models.UpdateWebPage(ctx, id, page)
+
+	if err != nil {
+		app.Logger.Error("error updating web page: %v", err)
+		return c.JSON(http.StatusInternalServerError, echo.Map{"error": err.Error()})
+	}
+
+	return c.JSON(http.StatusOK, echo.Map{"message": "page updated successfully"})
+
+}
+
+func (app *Config) GetPagesHandler(c echo.Context) error {
+	ctx := c.Request().Context()
+	pages, err := models.GetWebPages(ctx)
+	if err != nil {
+		fmt.Println(err, pages)
+		app.Logger.Error("error getting web pages: %v", err)
+		return c.JSON(http.StatusInternalServerError, echo.Map{"error": err.Error()})
+	}
+	return c.JSON(http.StatusOK, pages)
 }

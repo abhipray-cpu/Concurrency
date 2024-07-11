@@ -9,7 +9,7 @@ import (
 
 func Fetch(url string) (string, error) {
 	// Create a context with a timeout to ensure a maximum amount of time spent fetching
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 
 	// Create a new chromedp context
